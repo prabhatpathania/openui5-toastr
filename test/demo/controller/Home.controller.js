@@ -12,15 +12,14 @@ sap.ui.define([
 		/////////////////////////////////////////////
 
 		messageIndex: 0,
-		
+
 		/////////////////////////////////////////////
 		//  LIFECYCLE
 		/////////////////////////////////////////////
-		
+
 		onInit: function() {
 
 		},
-		
 		/////////////////////////////////////////////
 		//  METHODS
 		/////////////////////////////////////////////
@@ -52,7 +51,7 @@ sap.ui.define([
 
             return msgs[this.messageIndex];
 		},
-		
+
 		getConfig: function(config) {
 			config.onclick = this.isOnClickFlagged() ? function () { alert('Custom onclick callback'); } : null;
 			config.onShown = this.isOnShowFlagged() ? function () { alert('Custom onShown callback'); } : null;
@@ -60,19 +59,19 @@ sap.ui.define([
 			config.onCloseClick = this.isOnCloseFlagged() ? function () { alert('Custom onCloseClick callback'); } : null;
 			return config;
 		},
-		
+
 		isOnClickFlagged: function() {
 			return this.getView().getModel("temp").getProperty("/onclick_flagged");
 		},
-		
+
 		isOnShowFlagged: function() {
 			return this.getView().getModel("temp").getProperty("/onshow_flagged");
 		},
-		
+
 		isOnHiddenFlagged: function() {
 			return this.getView().getModel("temp").getProperty("/onhidden_flagged");
 		},
-		
+
 		isOnCloseFlagged: function() {
 			return this.getView().getModel("temp").getProperty("/oncloseclick_flagged");
 		},
@@ -100,7 +99,7 @@ sap.ui.define([
 			Toastr.info(message, toast.title, config);
 			this.updateGeneratedToastCode('info', message, toast.title, config);
 		},
-		
+
 		onToastSuccessClick: function(oEvent) {
 			var toast = this.getToastModel();
 			var message = this.getMessage(toast.message);
@@ -108,7 +107,7 @@ sap.ui.define([
 			Toastr.success(message, toast.title, config);
 			this.updateGeneratedToastCode('success', message, toast.title, config);
 		},
-		
+
 		onToastWarningClick: function(oEvent) {
 			var toast = this.getToastModel();
 			var message = this.getMessage(toast.message);
@@ -116,7 +115,7 @@ sap.ui.define([
 			Toastr.warning(message, toast.title, config);
 			this.updateGeneratedToastCode('warning', message, toast.title, config);
 		},
-		
+
 		onToastErrorClick: function(oEvent) {
 			var toast = this.getToastModel();
 			var message = this.getMessage(toast.message);
@@ -124,7 +123,7 @@ sap.ui.define([
 			Toastr.error(message, toast.title, config);
 			this.updateGeneratedToastCode('error', message, toast.title, config);
 		},
-		
+
 		onClearAllToastClick: function(oEvent) {
 			Toastr.clearAllToast();
 		},
@@ -132,7 +131,7 @@ sap.ui.define([
 		onClearLastToastClick: function(oEvent) {
 			Toastr.clearLastToast();
 		},
-		
+
 
 	});
 });
