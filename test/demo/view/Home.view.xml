@@ -1,4 +1,6 @@
-<mvc:View controllerName="Demo.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View controllerName="Demo.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true"
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core"
@@ -26,10 +28,10 @@
 						columnsM="1"
 						singleContainerFullSize="false" >
 						<f:content>
-							<TextArea id="generated_toast_code" value="" growing="true" width="100%" enabled="true" visible="true" rows="4" />	
+							<TextArea id="generated_toast_code" value="" growing="true" width="100%" enabled="true" visible="true" rows="4" />
 						</f:content>
 					</f:SimpleForm>
-				
+
 
 					<f:SimpleForm
 						editable="true"
@@ -50,10 +52,10 @@
 						singleContainerFullSize="false" >
 						<f:content>
 							<core:Title text="" />
-									
+
 							<Label text="{i18n>toastTitle}" />
 							<Input value="{temp>/toast/title}" />
-							
+
 							<Label text="{i18n>toastMessage}" />
 							<Input value="{temp>/toast/message}" />
 
@@ -105,7 +107,7 @@
 
 						</f:content>
 					</f:SimpleForm>
-					<f:SimpleForm 
+					<f:SimpleForm
 						editable="true"
 						layout="ResponsiveGridLayout"
 						title=""
@@ -124,21 +126,21 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<core:Title text="" />
-							
+
 							<Label text="{i18n>toastShowEasing}" />
 							<ComboBox
 								selectedKey="{temp>/toast/config/showEasing}">
 								<core:Item key="swing" text="{i18n>easingSwing}" />
 								<core:Item key="linear" text="{i18n>easingLinear}" />
 							</ComboBox>
-							
+
 							<Label text="{i18n>toastHideEasing}" />
 							<ComboBox
 								selectedKey="{temp>/toast/config/hideEasing}">
 								<core:Item key="swing" text="{i18n>easingSwing}" />
 								<core:Item key="linear" text="{i18n>easingLinear}" />
 							</ComboBox>
-							
+
 							<Label text="{i18n>toastShowMethod}" />
 							<ComboBox
 								selectedKey="{temp>/toast/config/showMethod}">
@@ -146,7 +148,7 @@
 								<core:Item key="fadeIn" text="{i18n>methodFadIn}" />
 								<core:Item key="slidDown" text="{i18n>methodSlideDown}" />
 							</ComboBox>
-							
+
 							<Label text="{i18n>toastHideMethod}" />
 							<ComboBox
 								selectedKey="{temp>/toast/config/hideMethod}">
@@ -170,19 +172,19 @@
 							<Input value="{temp>/toast/config/extendedTimeOut}" />
 
 						</f:content>
-					</f:SimpleForm>																									
-					
+					</f:SimpleForm>
+
 				</content>
 				<footer>
 					<Toolbar>
-						<Button text="{i18n>buttonClearLast}" press="onClearLastToastClick" />		
-						<Button text="{i18n>buttonClearAll}" press="onClearAllToastClick" />	
+						<Button text="{i18n>buttonClearLast}" press="onClearLastToastClick" />
+						<Button text="{i18n>buttonClearAll}" press="onClearAllToastClick" />
 
 						<ToolbarSpacer/>
-						<Button text="{i18n>buttonInfoToast}" press="onToastInfoClick" />	
-						<Button text="{i18n>buttonSuccessToast}" press="onToastSuccessClick" />	
-						<Button text="{i18n>buttonWarningToast}" press="onToastWarningClick" />	
-						<Button text="{i18n>buttonErrorToast}" press="onToastErrorClick" />		
+						<Button text="{i18n>buttonInfoToast}" press="onToastInfoClick" />
+						<Button text="{i18n>buttonSuccessToast}" press="onToastSuccessClick" />
+						<Button text="{i18n>buttonWarningToast}" press="onToastWarningClick" />
+						<Button text="{i18n>buttonErrorToast}" press="onToastErrorClick" />
 					</Toolbar>
 				</footer>
 			</Page>
